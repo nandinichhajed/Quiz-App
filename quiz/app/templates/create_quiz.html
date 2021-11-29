@@ -1,0 +1,49 @@
+{% load static %}  
+
+<html>  
+ <head>  
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+
+ <!-- Optional theme -->  
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">  
+
+ <!-- Latest compiled and minified JavaScript -->  
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+ <link href="{% static 'login/style.css' %}" rel="stylesheet"/>  
+ <link href="{% static 'https://fonts.googleapis.com/css?family=Ubuntu' %}" rel="stylesheet"/>  
+ <meta content="width=device-width, initial-scale=1" name="viewport"/>  
+ <link href="{% static 'path/to/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"/>  
+ <title>  
+ QUIZ APP  
+ </title>  
+ </head>  
+ <body>  
+ <div class="main">  
+ <p align="center" class="sign">  
+ Create a Quiz  
+ </p>  
+ <center>  
+ <form class="form1" method="POST">  
+ {% csrf_token %}  
+ {% if messages %}  
+<ul class="messages">  
+ {% for message in messages %}  
+ <li{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color:red;">{{ message }}</li>  
+ {% endfor %}  
+</ul>  
+{% endif %}  
+ Quiz Name:  
+ <input align="center" class="pass" type="text" name="quiz_name" />  
+ <br>  
+ Quiz Description:  
+ <input align="center" class="pass" type="text" name="quiz_description" />  
+ <br>  
+ Total Questions:  
+ <input align="center" class="pass" type="number" name="total_questions" />  
+ <br>  
+ <a href="dashboard" class="btn btn-primary">Back</a><button class="btn btn-primary" type="submit">Create Quiz </button>  
+ </form>  
+ </center>  
+ </div>  
+ </body>  
+</html>
