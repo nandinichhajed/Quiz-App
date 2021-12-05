@@ -10,7 +10,7 @@ from collections import Iterable
 import hashlib
 from datetime import datetime
 
-client = FaunaClient(secret="fnAEZq7eVjAAQrXBuPTntiGCiAKAoIkueJe7Uql_")
+client = FaunaClient(secret="Secreat-key")
 indexes = client.query(q.paginate(q.indexes()))
 print(indexes)
 # # Create your views here.
