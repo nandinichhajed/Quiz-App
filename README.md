@@ -55,29 +55,30 @@ python manage.py migrate
 
 **Creating The Collections in Fauna**
 
-create four collections Users,Quiz,Question and Answers.
+create four collections `Users`, `Quiz`, `Question` and `Answers`.
 
 **Creating the Fauna Indexes**
+
 We will need to create eight Fauna indexes that will allow us to scroll through data added to our database. The indexes are the; `user`, `quiz_index`, `quiz_get_index`, `question_index`, `question_get_index`,`question_answer`,`answer_score_index` and the `answer_get_index`.
 
-The `user` index will have a term for `username” and will be a unique field that will allow querying of the User collection. 
+- The `user` index will have a term for `username` and will be a unique field that will allow querying of the User collection. 
 
-The `quiz_index` index will have a term for `name` and will be a unique field that will allow querying and creating new documents in the Quiz collection. 
+- The `quiz_index` index will have a term for `name` and will be a unique field that will allow querying and creating new documents in the Quiz collection. 
 
-The `quiz_get_index` index will have a term for `status` which will also allow querying of the Quiz collection. 
+- The `quiz_get_index` index will have a term for `status` which will also allow querying of the Quiz collection. 
 
-The `question_index` index will have a term for `question_asked` which will allow querying of the Question collection. 
+- The `question_index` index will have a term for `question_asked` which will allow querying of the Question collection. 
 
-The `question_get_index` will have a term for "name" which will allow querying and matching with of the data in the Question collection. 
+- The `question_get_index` will have a term for "name" which will allow querying and matching with of the data in the Question collection. 
 
-The `question_answer` index will have a term for `correct_answer` which will also allow querying and matching of Question collection. 
+- The `question_answer` index will have a term for `correct_answer` which will also allow querying and matching of Question collection. 
 
-The `answer_score_index` will have a term for `user` and `quiz` which will allow matching and querying of the Answers collection. 
+- The `answer_score_index` will have a term for `user` and `quiz` which will allow matching and querying of the Answers collection. 
 
-The `answer_get_index` will have a term for `user` and `question` which will also allow matching and querying of the Answers collection.
+- The `answer_get_index` will have a term for `user` and `question` which will also allow matching and querying of the Answers collection.
 
 
-**Run server**
+### Run server
 
 ```bash
 python manage.py runserver
