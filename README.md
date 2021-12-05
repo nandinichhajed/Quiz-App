@@ -17,13 +17,13 @@ Fauna is a client-side serverless document database that makes use of GraphQL an
 **Clone project**
 
 ```bash
-git clone https://github.com/nandinichhajed/Tubers.git
+git clone https://github.com/nandinichhajed/Quiz-App.git
 ```
 
 **Get project forlder**
 
 ```bash
-cd tubers
+cd quiz
 ```
 
 **Create virtual Environment**
