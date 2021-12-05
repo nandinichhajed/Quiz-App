@@ -6,7 +6,6 @@ import pytz
 from faunadb import query as q
 from faunadb.objects import Ref
 from faunadb.client import FaunaClient
-from collections import Iterable
 import hashlib
 from datetime import datetime
 
