@@ -14,6 +14,8 @@ Fauna is a client-side serverless document database that makes use of GraphQL an
 
 ## Run Locally
 
+- Fork the repository, and clone the repository!
+
 **Clone project**
 
 ```bash
